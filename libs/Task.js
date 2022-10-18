@@ -452,7 +452,7 @@ module.exports = class Task{
                               'odm_orthophoto/odm_orthophoto.mbtiles',
                               'odm_orthophoto/odm_orthophoto.kmz',
                               'odm_georeferencing', 'odm_texturing',
-                              'odm_dem/dsm.tif', 'odm_dem/dtm.tif', 'dsm_tiles', 'dtm_tiles',
+                              'odm_dem/dsm.tif', 'odm_dem/dtm.tif', 'odm_dem/ndsm.tif', 'dsm_tiles', 'dtm_tiles',
                               'orthophoto_tiles', 'potree_pointcloud', 'entwine_pointcloud', 
                               '3d_tiles',
                               'images.json', 'cameras.json',
@@ -478,7 +478,7 @@ module.exports = class Task{
                     logger.info("Test mode will skip DEMs generation");
 
                     // Exclude these folders from the all.zip archive
-                    ['odm_dem/dsm.tif', 'odm_dem/dtm.tif', 'dsm_tiles', 'dtm_tiles'].forEach(p => {
+                    ['odm_dem/dsm.tif', 'odm_dem/dtm.tif', 'odm_dem/ndsm.tif', 'dsm_tiles', 'dtm_tiles'].forEach(p => {
                         allPaths.splice(allPaths.indexOf(p), 1);
                     });
                 }
