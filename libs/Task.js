@@ -241,7 +241,7 @@ module.exports = class Task{
     updateProcessingTime(resetTime){
         this.processingTime = resetTime ?
                                 -1		:
-                                new Date().getTime() - this.dateCreated;
+                                new Date().getTime() - (this.dateStarted > 0 ? this.dateStarted : this.dateCreated);
     }
 
     startTrackingProcessingTime(){
